@@ -25,10 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\user-list\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AirsoftTeamApp.Core\AirsoftTeamApp.Core.csproj" />
     <ProjectReference Include="..\AirsoftTeamApp.DAL\AirsoftTeamApp.DAL.csproj" />
   </ItemGroup>
