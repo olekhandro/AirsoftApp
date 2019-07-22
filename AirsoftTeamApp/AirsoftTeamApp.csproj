@@ -19,8 +19,16 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\Новая папка1\**" />
+    <Compile Remove="ClientApp\src\app\Новая папка2\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\Новая папка1\**" />
+    <Content Remove="ClientApp\src\app\Новая папка2\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\Новая папка1\**" />
+    <EmbeddedResource Remove="ClientApp\src\app\Новая папка2\**" />
     <None Remove="$(SpaRoot)**" />
+    <None Remove="ClientApp\src\app\Новая папка1\**" />
+    <None Remove="ClientApp\src\app\Новая папка2\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 

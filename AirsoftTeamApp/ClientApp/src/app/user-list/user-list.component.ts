@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
 })
 export class UserListComponent {
   isExpanded = false;
+  
+}
+enum UserRole {Командир, Боец};
+enum UserState {Active, Deleted, Reserve}
 
+class User {
+  Id: number;
+  UserName: string;
+  FirstName: string;
+  LastName: string;
+  Role: UserRole;
+  RegistrationDate: Date;
+  State: UserState;
+  Photo: string;
+  HasCar: boolean;
 }
