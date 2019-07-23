@@ -15,21 +15,21 @@ namespace AirsoftTeamApp.DAL.Services
                     FirstName = "Александр" ,
                     LastName = "Захаров",
                     Id = 1,
-                    Name = "Iskander"
+                    UserName = "Iskander"
                 },
                 new User()
                 {
                     FirstName = "Андрей" ,
                     LastName = "Мочалов",
                     Id = 2,
-                    Name = "Crimson"
+                    UserName = "Crimson"
                 },
                 new User()
                 {
                     FirstName = "Антон" ,
                     LastName = "Птичкин",
                     Id = 3,
-                    Name = "Птица"
+                    UserName = "Птица"
                 }
             };
         }

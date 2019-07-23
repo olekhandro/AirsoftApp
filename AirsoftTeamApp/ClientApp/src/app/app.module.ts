@@ -9,7 +9,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { UserListComponent } from './user-list/user-list.component';
+import { UserListComponent } from './users/user-list/user-list.component';
 import { GamesListComponent } from './games/games-list/games-list.component';
 import { TrainingListComponent } from './training/training-list/training-list.component';
 import { EventsListComponent } from './events/events-list/events-list.component';

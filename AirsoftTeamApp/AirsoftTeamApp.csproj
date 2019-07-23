@@ -10,6 +10,7 @@
 
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
+	<TypeScriptExperimentalDecorators>true</TypeScriptExperimentalDecorators>
   </PropertyGroup>
 
   <ItemGroup>
@@ -33,8 +34,28 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\users\models\UserModel.ts" />
+    <None Remove="ClientApp\src\app\users\services\UserService.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AirsoftTeamApp.Core\AirsoftTeamApp.Core.csproj" />
     <ProjectReference Include="..\AirsoftTeamApp.DAL\AirsoftTeamApp.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\gun-48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\users\models\UserModel.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\users\services\UserService.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

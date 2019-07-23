@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="Entities\Identifiable.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Enums\UserState.cs" />
+    <Compile Include="Enums\UserRole.cs" />
     <Compile Include="ServiceInterfaces\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
