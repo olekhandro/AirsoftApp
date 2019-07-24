@@ -15,6 +15,8 @@ namespace AirsoftTeamApp.Core.Entities
         public DateTime RegistrationDate { get; set; }
         public string PhotoLink { get; set; }
         public bool HasCar { get; set; }
+        public string Email { get; set; }
+        public string PasswordHash { get; set; }
 
         public ICollection<UserEvent> UserEvents { get; set; }
     }
