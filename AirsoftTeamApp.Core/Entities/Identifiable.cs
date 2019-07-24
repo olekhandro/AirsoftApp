@@ -1,6 +1,6 @@
 ﻿namespace AirsoftTeamApp.Core.Entities
 {
-    public class Identifiable
+    public abstract class Identifiable
     {
         public int Id { get; set; }
     }

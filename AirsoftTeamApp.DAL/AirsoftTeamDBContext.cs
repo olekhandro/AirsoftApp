@@ -11,6 +11,7 @@ namespace AirsoftTeamApp.DAL
     public class AirsoftTeamDBContext : DbContext
     {
         public DbSet<User> Users { get; set; }
+        public DbSet<Event> Events { get; set; }
 
         public AirsoftTeamDBContext(DbContextOptions<AirsoftTeamDBContext> options) :base(options)
         {

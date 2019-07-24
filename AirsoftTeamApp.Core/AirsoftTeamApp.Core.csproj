@@ -118,8 +118,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Identifiable.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Enums\EventType.cs" />
     <Compile Include="Enums\UserState.cs" />
     <Compile Include="Enums\UserRole.cs" />
     <Compile Include="ServiceInterfaces\IUserService.cs" />
