@@ -14,5 +14,7 @@ namespace AirsoftTeamApp.Core.Entities
         public string CoordY { get; set; }
         public DateTime Date { get; set; }
         public EventType EventType { get; set; }
+
+        public ICollection<UserEvent> UserEvents { get; set; }
     }
 }

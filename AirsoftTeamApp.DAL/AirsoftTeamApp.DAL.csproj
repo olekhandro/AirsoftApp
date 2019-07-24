@@ -127,6 +127,10 @@
     <Compile Include="Migrations\20190724142358_Events.designer.cs">
       <DependentUpon>20190724142358_Events.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190724143930_UserEvents.cs" />
+    <Compile Include="Migrations\20190724143930_UserEvents.designer.cs">
+      <DependentUpon>20190724143930_UserEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AirsoftTeamDBContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\UserService.cs" />

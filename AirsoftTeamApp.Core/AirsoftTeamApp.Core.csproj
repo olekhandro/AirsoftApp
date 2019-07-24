@@ -121,6 +121,7 @@
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Identifiable.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserEvent.cs" />
     <Compile Include="Enums\EventType.cs" />
     <Compile Include="Enums\UserState.cs" />
     <Compile Include="Enums\UserRole.cs" />
