@@ -3,6 +3,7 @@ using AirsoftTeamApp.Core.Enums;
 
 namespace AirsoftTeamApp.Core.Entities
 {
+    [Serializable]
     public class User: Identifiable
     {
         public string UserName { get; set; }

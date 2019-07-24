@@ -1,24 +1,24 @@
 
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-8 col-lg-6 col-xs-12">
     <table class="table">
       <thead class="thead-dark">
-      <tr>
-        <th>Id</th>
-        <th>Photo</th>
-        <th>Username</th>
-        <th>Lastname</th>
-        <th>Firstname</th>
-        <th>Role</th>
-        <th>RegistrationDate</th>
-        <th>State</th>
-        <th>HasCar</th>
-      </tr>
+        <tr>
+          <th>Id</th>
+          <th>Photo</th>
+          <th>Username</th>
+          <th>Lastname</th>
+          <th>Firstname</th>
+          <th>Role</th>
+          <th>RegistrationDate</th>
+          <th>State</th>
+          <th>HasCar</th>
+        </tr>
       </thead>
       <tbody>
         <tr *ngFor="let user of users | async">
           <td>{{user.id}}</td>
-          <td><img src="/images/gun-48.png"/></td>
+          <td><img src="/images/gun-48.png" /></td>
           <td>{{user.userName}}</td>
           <td>{{user.firstName}}</td>
           <td>{{user.lastName}}</td>
