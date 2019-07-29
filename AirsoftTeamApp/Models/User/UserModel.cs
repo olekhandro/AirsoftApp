@@ -22,7 +22,9 @@ namespace AirsoftTeamApp.Models.User
         public string password { get; set; }
 
         public UserModel()
-        { }
+        {
+
+        }
 
         public UserModel(Core.Entities.User user)
         {
@@ -37,6 +39,26 @@ namespace AirsoftTeamApp.Models.User
             hasCar = user.HasCar;
             email = user.Email;
             password = user.PasswordHash;
+        }
+
+        public Core.Entities.User ToUser()
+        {
+            var user = new Core.Entities.User
+            {
+                Id = id,
+                UserName = userName,
+                FirstName = firstName,
+                LastName = lastName,
+                Role = role,
+                RegistrationDate = registrationDate,
+                State = state,
+                PhotoLink = photo,
+                HasCar = hasCar,
+                Email = email,
+                PasswordHash = password
+            };
+
+            return user;
         }
     }
 }
