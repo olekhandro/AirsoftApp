@@ -17,13 +17,19 @@ var UserService = /** @class */ (function () {
     function UserService(http, baseUrl) {
         this.http = http;
         this.baseUrl = baseUrl;
+        this.headers = new http_1.HttpHeaders({ 'Content-Type': 'application/json' });
     }
     UserService.prototype.GetAllUsers = function () {
         var _this = this;
-        var headers = new http_1.HttpHeaders({ 'Content-Type': 'application/json' });
-        return this.http.get(this.baseUrl + 'api/User/Users', { headers: headers }).pipe(operators_1.tap(function (data) {
+        return this.http.get(this.baseUrl + 'api/User/Users', { headers: this.headers }).pipe(operators_1.tap(function (data) {
             _this.users = data;
         }), operators_1.catchError(this.handleError));
+    };
+    UserService.prototype.AddUser = function (user) {
+        return this.http.post(this.baseUrl + 'api/User/AddUser', user, { headers: this.headers }).pipe();
+    };
+    UserService.prototype.GetUserById = function (userId) {
+        return this.http.get(this.baseUrl + 'api/User/GetById/' + userId, { headers: this.headers }).pipe();
     };
     UserService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {

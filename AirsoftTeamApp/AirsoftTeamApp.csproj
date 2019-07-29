@@ -35,6 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\models\requestResult.ts" />
     <None Remove="ClientApp\src\app\users\models\UserModel.ts" />
     <None Remove="ClientApp\src\app\users\services\UserService.ts" />
   </ItemGroup>
@@ -55,6 +56,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\models\requestResult.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\users\models\UserModel.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\users\services\UserService.ts" />
   </ItemGroup>

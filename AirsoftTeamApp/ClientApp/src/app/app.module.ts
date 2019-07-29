@@ -12,6 +12,7 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
 import { UserListComponent } from './users/user-list/user-list.component';
 import { AddUserComponent } from './users/add-user/add-user.component';
+import { EditUserComponent } from './users/edit-user/edit-user.component';
 
 import { GamesListComponent } from './games/games-list/games-list.component';
 import { TrainingListComponent } from './training/training-list/training-list.component';
@@ -34,7 +35,8 @@ import { MyProfileComponent } from './profile/myprofile/myprofile.component';
     CalendarComponent,
     StatisticsComponent,
     MyProfileComponent,
-    AddUserComponent
+    AddUserComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -53,7 +55,8 @@ import { MyProfileComponent } from './profile/myprofile/myprofile.component';
       { path: 'events/list', component: EventsListComponent },
       { path: 'calendar', component: CalendarComponent },
       { path: 'statistics', component: StatisticsComponent },
-      { path: 'profile/myprofile', component: MyProfileComponent }
+      { path: 'profile/myprofile', component: MyProfileComponent },
+      { path: 'users/edit/:userId', component: EditUserComponent, data: { title: 'Edit User' }}
     ])
   ],
   providers: [],
