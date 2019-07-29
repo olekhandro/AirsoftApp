@@ -5,7 +5,8 @@ import { Observable, throwError } from 'rxjs'
 
 @Component({
   selector: 'user-list-component',
-  templateUrl: './user-list.component.html'
+  templateUrl: './user-list.component.html',
+  styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent {
   isExpanded = false;
