@@ -1,4 +1,4 @@
-import { Component,  Inject, Injectable } from '@angular/core';
+import { Component, Inject, Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs'
 import { catchError, tap } from 'rxjs/operators'
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpResponse } from '@angular/common/http';
@@ -9,19 +9,27 @@ import { UserModel } from '../models/UserModel';
 })
 
 export class UserService {
-  private data: any;
+
   public users: UserModel[];
 
+  private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
   }
 
-  public  GetAllUsers() {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.get<UserModel[]>(this.baseUrl + 'api/User/Users', { headers: headers }).pipe(tap(data => {
-        this.users = data;
-      }),
+  public GetAllUsers() {
+    return this.http.get<UserModel[]>(this.baseUrl + 'api/User/Users', { headers: this.headers }).pipe(tap(data => {
+      this.users = data;
+    }),
       catchError(this.handleError)
     );
+  }
+
+  public AddUser(user: UserModel) {
+    return this.http.post<UserModel>(this.baseUrl + 'api/User/AddUser', user, { headers: this.headers }).pipe();
+  }
+
+  public GetUserById(userId: number):Observable<UserModel> {
+    return this.http.get<UserModel>(this.baseUrl + 'api/User/GetById/' + userId, { headers: this.headers }).pipe();
   }
 
   private handleError(error: HttpErrorResponse) {
@@ -35,6 +43,6 @@ export class UserService {
     }
     // return an observable with a user-facing error message  
     return throwError('Something bad happened; please try again later.');
-  };  
+  };
 }
 

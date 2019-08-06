@@ -9,7 +9,11 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+
 import { UserListComponent } from './users/user-list/user-list.component';
+import { AddUserComponent } from './users/add-user/add-user.component';
+import { EditUserComponent } from './users/edit-user/edit-user.component';
+
 import { GamesListComponent } from './games/games-list/games-list.component';
 import { TrainingListComponent } from './training/training-list/training-list.component';
 import { EventsListComponent } from './events/events-list/events-list.component';
@@ -30,7 +34,9 @@ import { MyProfileComponent } from './profile/myprofile/myprofile.component';
     EventsListComponent,
     CalendarComponent,
     StatisticsComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    AddUserComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -40,13 +46,17 @@ import { MyProfileComponent } from './profile/myprofile/myprofile.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'user-list', component: UserListComponent },
+
+      { path: 'users/list', component: UserListComponent },
+      { path: 'users/add', component: AddUserComponent },
+      
       { path: 'games/list', component: GamesListComponent },
       { path: 'training/list', component: TrainingListComponent },
       { path: 'events/list', component: EventsListComponent },
       { path: 'calendar', component: CalendarComponent },
       { path: 'statistics', component: StatisticsComponent },
-      { path: 'profile/myprofile', component: MyProfileComponent }
+      { path: 'profile/myprofile', component: MyProfileComponent },
+      { path: 'users/edit/:userId', component: EditUserComponent, data: { title: 'Edit User' }}
     ])
   ],
   providers: [],
