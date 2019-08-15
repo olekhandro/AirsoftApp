@@ -1,0 +1,10 @@
+.text-box {
+  width: 456px;
+  height: 575px;
+  left: 88px;
+  top: 176px;
+  padding: 36px 42px 36px 42px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 5px 5px 10px rgba(28, 47, 26, 0.25);
+  color: #E5E5E5;
+}

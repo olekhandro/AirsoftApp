@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'add-user-component',
-  templateUrl: './add-user.component.html'
+  templateUrl: './add-user.component.html',
+  styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent {
   isExpanded = false;
