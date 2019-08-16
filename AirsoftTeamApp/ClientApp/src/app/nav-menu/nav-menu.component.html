@@ -7,17 +7,26 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
-        <ul class="navbar-nav flex-grow">
-          <!--
-          <li class="nav-item" [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
-            <a class="nav-link text-dark" [routerLink]='["/"]'>Home</a>
-          -->
+        <ul class="navbar-nav flex-grow mr-auto">
           <li class="nav-item" [routerLinkActive]='["link-active"]'>
             <a class="nav-link text-dark" [routerLink]='["/users/list"]'>Команда</a>
           </li>
-          <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/games/list"]'>Игры</a>
+          <li class="nav-item dropdown" [routerLinkActive]='["link-active"]'>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false" href="#">События</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]='["/training/list"]'>Тренировки</a>
+              <a class="dropdown-item" [routerLink]='["/games/list"]'>Игры</a>
+              <a class="dropdown-item" [routerLink]='["/events/list"]'>Лекции</a>
+            </div>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>             
+            </div>
           <li class="nav-item" [routerLinkActive]='["link-active"]'>
             <a class="nav-link text-dark" [routerLink]='["/training/list"]'>Тренировки</a>
           </li>
@@ -25,8 +34,8 @@
             <a class="nav-link text-dark" [routerLink]='["/events/list"]'>Лекции</a>
           </li>
           <!--<li class="nav-item" [routerLinkActive]='["link-active"]'>
-        <a class="nav-link text-dark" [routerLink]='["/calendar"]'>Calendar</a>
-      </li>-->
+    <a class="nav-link text-dark" [routerLink]='["/calendar"]'>Calendar</a>
+  </li>-->
           <li class="nav-item" [routerLinkActive]='["link-active"]'>
             <a class="nav-link text-dark" [routerLink]='["/statistics"]'>Статистика</a>
           </li>
