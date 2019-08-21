@@ -15,8 +15,14 @@ import { AddUserComponent } from './users/add-user/add-user.component';
 import { EditUserComponent } from './users/edit-user/edit-user.component';
 
 import { GamesListComponent } from './games/games-list/games-list.component';
+import { AddGameComponent} from './games/add-game/add-game.component'
+
 import { TrainingListComponent } from './training/training-list/training-list.component';
+import { AddTrainingComponent } from './training/add-training/add-training.component'; 
+
 import { EventsListComponent } from './events/events-list/events-list.component';
+import { AddEventComponent } from './events/add-event/add-event.component'
+
 import { CalendarComponent } from './calendar/calendar.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { MyProfileComponent } from './profile/myprofile/myprofile.component';
@@ -29,9 +35,16 @@ import { MyProfileComponent } from './profile/myprofile/myprofile.component';
     CounterComponent,
     FetchDataComponent,
     UserListComponent,
+
     GamesListComponent,
+    AddGameComponent,
+
     TrainingListComponent,
+    AddTrainingComponent,
+
     EventsListComponent,
+    AddEventComponent,
+
     CalendarComponent,
     StatisticsComponent,
     MyProfileComponent,
@@ -51,8 +64,14 @@ import { MyProfileComponent } from './profile/myprofile/myprofile.component';
       { path: 'users/add', component: AddUserComponent },
       
       { path: 'games/list', component: GamesListComponent },
+      { path: 'games/add', component: AddGameComponent },
+
       { path: 'training/list', component: TrainingListComponent },
+      { path: 'training/add', component: AddTrainingComponent },
+
       { path: 'events/list', component: EventsListComponent },
+      { path: 'events/add', component: AddEventComponent },
+      
       { path: 'calendar', component: CalendarComponent },
       { path: 'statistics', component: StatisticsComponent },
       { path: 'profile/myprofile', component: MyProfileComponent },

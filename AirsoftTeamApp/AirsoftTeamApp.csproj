@@ -39,6 +39,7 @@
     <None Remove="ClientApp\src\app\users\add-user\training-list.component.css" />
     <None Remove="ClientApp\src\app\users\add-user\user-list.component.css" />
     <None Remove="ClientApp\src\app\users\models\UserModel.ts" />
+    <None Remove="ClientApp\src\app\users\services\EventsService.ts" />
     <None Remove="ClientApp\src\app\users\services\UserService.ts" />
   </ItemGroup>
 
@@ -62,6 +63,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\users\models\UserModel.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\users\services\EventsService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\users\services\UserService.ts" />
   </ItemGroup>
 
