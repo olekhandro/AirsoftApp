@@ -2,8 +2,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8">
-        <h1>Состав команды</h1>
-        </div>
+        <h1>Команда</h1>
+      </div>
       <div class="col-md-4">
         <a class="btn btn-primary" [routerLink]='["/users/add"]'>Add</a>
       </div>
@@ -13,6 +13,7 @@
       <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let user of users | async">
         <div class="user-list-card"  [routerLink]="['/users/edit', user.id]">
           <div [ngClass]="{'active':user.state == 0, 'deleted': user.state == 1, 'reserve':user.state == 2}">
+            <span class="badge badge-light">{{user.state}}</span>
             <img src="/images/shooting-sport.png" class="photo" />
             <div class="nickname">
               {{user.userName}}
