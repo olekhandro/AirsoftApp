@@ -58,5 +58,11 @@ namespace AirsoftTeamApp.Controllers
         {
             return new UserModel(_airsoftTeamDbContext.Users.FirstOrDefault(x => x.Id == userId));
         }
+
+        [HttpDelete("[action]/{userId}")]
+        public void DeleteById(int userId)
+        {
+
+        }
     }
 }
