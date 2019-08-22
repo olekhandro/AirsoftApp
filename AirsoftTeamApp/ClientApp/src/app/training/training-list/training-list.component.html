@@ -1,32 +1,53 @@
-<div class="container">
-  <h1>Training</h1>
-  
-  <div class="row">
-    <div class="col-md-12">
-      <a class="btn btn-primary" [routerLink]='["/training/add"]'>Add</a>
+<!--<div class="container">-->
+  <div class="row title">
+    <div class="col-md-9">
+      <h1>Тренировки</h1>
+    </div>
+    <div class="col-md-3 text-right">
+      <a class="btn btn-outline-light" [routerLink]='["/training/add"]'>Добавить тренировку</a>
     </div>
   </div>
-  <div class="box-event">
-    <div class="row">
-      <div class="col-3">
-        <h2>Сб, 15 Августа</h2>
-        <h2>9:00-15:00</h2>
-      </div>
-      <div class="col-1">
-        <img src="/images/PointMap.png" />
-      </div>
-      <div class="col-4">
-        <p>Самара, Красноглинское шоссе</p>
-        <a href="https://www.google.com/maps/place/53.346222,50.242778">53.346222,50.242778</a>
-      </div>
-      <div class="col-2">
-        <p>Примут участие 45 человек</p>
-      </div>
-      <div class="col-2">
-       <button type="submit" class="btn btn-success">Записаться</button>
-      </div>
+  <div class="row box-event">    
+    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+      <h4><span class="badge badge-info">Тренировка</span></h4>
+      <h3>Сб, 15 Августа</h3>
+      <h3>9:00-15:00</h3>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-2 col-3">
+      <img src="/images/PointMap.png" />
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-10 col-9">
+      <h3>Самара, Красноглинское шоссе</h3>
+      <a href="https://www.google.com/maps/place/53.346222,50.242778">53.346222,50.242778</a>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-6 col-12 text-center">
+      <div class="participants">Примут участие: <span class="count">45</span> человек</div>
+    </div>
+    <div class="col-lg-2 col-md-3 col-sm-6 col-12 text-center">
+      <button type="submit" class="btn btn-success">Записаться</button>
+    </div>    
+  </div>
+
+  <div class="row box-event">
+    <div class="col-3">
+      <h4><span class="badge badge-info">Тренировка</span></h4>
+      <h3>Сб, 15 Августа</h3>
+      <h3>9:00-15:00</h3>
+    </div>
+    <div class="col-1">
+      <img src="/images/PointMap.png" />
+    </div>
+    <div class="col-4">
+      <h3>Самара, Красноглинское шоссе</h3>
+      <a href="https://www.google.com/maps/place/53.346222,50.242778">53.346222,50.242778</a>
+    </div>
+    <div class="col-2">
+      <div class="participants">Примут участие: <span class="count">45</span> человек</div>
+    </div>
+    <div class="col-2 text-right">
+      <button type="submit" class="btn btn-success">Записаться</button>
     </div>
   </div>
-</div>
+<!--</div>-->
 
 
