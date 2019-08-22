@@ -37,6 +37,8 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\events\models\EventModel.ts" />
     <None Remove="ClientApp\src\app\models\requestResult.ts" />
+    <None Remove="ClientApp\src\app\users\add-user\training-list.component.css" />
+    <None Remove="ClientApp\src\app\users\add-user\user-list.component.css" />
     <None Remove="ClientApp\src\app\training\models\TrainingModel.ts" />
     <None Remove="ClientApp\src\app\training\services\TrainingService.ts" />
     <None Remove="ClientApp\src\app\users\models\UserModel.ts" />
