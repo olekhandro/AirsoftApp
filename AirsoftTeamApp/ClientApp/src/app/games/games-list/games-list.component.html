@@ -9,4 +9,30 @@
       <a class="btn btn-primary" [routerLink]='["/games/add"]'>Add</a>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>CoordX</th>
+          <th>CoordY</th>
+          <th>Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Place</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let game of games | async">
+          <td>{{game.name}}</td>
+          <td>{{game.coordX}}</td>
+          <td>{{game.coordY}}</td>
+          <td>{{game.date}}</td>
+          <td>{{game.startTime}}</td>
+          <td>{{game.endTime}}</td>
+          <td>{{game.place}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </div>

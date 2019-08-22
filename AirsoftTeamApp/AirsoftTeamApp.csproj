@@ -35,7 +35,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\events\models\EventModel.ts" />
     <None Remove="ClientApp\src\app\models\requestResult.ts" />
+    <None Remove="ClientApp\src\app\training\models\TrainingModel.ts" />
+    <None Remove="ClientApp\src\app\training\services\TrainingService.ts" />
     <None Remove="ClientApp\src\app\users\models\UserModel.ts" />
     <None Remove="ClientApp\src\app\users\services\EventsService.ts" />
     <None Remove="ClientApp\src\app\users\services\UserService.ts" />
@@ -57,11 +60,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\events\models\EventModel.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\models\requestResult.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\training\models\TrainingModel.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\training\services\TrainingService.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\users\models\UserModel.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\users\services\EventsService.ts">
+    <TypeScriptCompile Include="ClientApp\src\app\events\services\EventsService.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\users\services\UserService.ts" />

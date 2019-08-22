@@ -6,6 +6,33 @@
       <a class="btn btn-primary" [routerLink]='["/training/add"]'>Add</a>
     </div>
   </div>
+  
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>CoordX</th>
+          <th>CoordY</th>
+          <th>Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Place</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let training of trainings | async">
+          <td>{{training.name}}</td>
+          <td>{{training.coordX}}</td>
+          <td>{{training.coordY}}</td>
+          <td>{{training.date}}</td>
+          <td>{{training.startTime}}</td>
+          <td>{{training.endTime}}</td>
+          <td>{{training.place}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
   <div class="box-event">
     <div class="row">
       <div class="col-3">
