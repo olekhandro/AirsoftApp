@@ -14,10 +14,10 @@ export class EventsListComponent {
   constructor(private eventService: EventsService) { }
 
   ngOnInit() {
-    this.GetAllUsers();
+    this.GetAllEvents();
   }
 
-  public GetAllUsers() {
+  public GetAllEvents() {
     this.events = this.eventService.GetAllEvents();
   }
 }

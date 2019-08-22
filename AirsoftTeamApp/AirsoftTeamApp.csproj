@@ -36,6 +36,8 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\events\models\EventModel.ts" />
+    <None Remove="ClientApp\src\app\games\models\GameModel.ts" />
+    <None Remove="ClientApp\src\app\games\services\GameService.ts" />
     <None Remove="ClientApp\src\app\models\requestResult.ts" />
     <None Remove="ClientApp\src\app\users\add-user\training-list.component.css" />
     <None Remove="ClientApp\src\app\users\add-user\user-list.component.css" />
@@ -63,6 +65,12 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\events\models\EventModel.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\games\models\GameModel.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\games\services\GameService.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\models\requestResult.ts">
