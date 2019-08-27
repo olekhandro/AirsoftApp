@@ -13,6 +13,7 @@ namespace AirsoftTeamApp.DAL
         public DbSet<User> Users { get; set; }
         public DbSet<Event> Events { get; set; }
         public DbSet<UserEvent> UserEvents { get; set; }
+        public DbSet<Game> Games { get; set; }
 
         public AirsoftTeamDBContext(DbContextOptions<AirsoftTeamDBContext> options) :base(options)
         {

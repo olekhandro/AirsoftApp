@@ -1,7 +1,7 @@
 .user-photo {
   position: relative;
-  height: 320px;
-  width: 320px;
+  max-height: 320px;
+  max-width: 320px;
   text-align: center;
   border: 4px solid #C9BE83;
   box-sizing: border-box;
@@ -16,9 +16,9 @@
   padding-bottom: 8px;
 }
 
-.form-group .form-control {
+.form-control {
   height: 28px;
-  width: 240px;
+  /*width: 240px;*/
   background: #C9BE83;
   border-radius: 2px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);

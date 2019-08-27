@@ -62,6 +62,7 @@ import { MyProfileComponent } from './profile/myprofile/myprofile.component';
 
       { path: 'users/list', component: UserListComponent },
       { path: 'users/add', component: AddUserComponent },
+      { path: 'users/edit/:userId', component: EditUserComponent, data: { title: 'Edit User' } },
       
       { path: 'games/list', component: GamesListComponent },
       { path: 'games/add', component: AddGameComponent },
@@ -74,8 +75,7 @@ import { MyProfileComponent } from './profile/myprofile/myprofile.component';
       
       { path: 'calendar', component: CalendarComponent },
       { path: 'statistics', component: StatisticsComponent },
-      { path: 'profile/myprofile', component: MyProfileComponent },
-      { path: 'users/edit/:userId', component: EditUserComponent, data: { title: 'Edit User' }}
+      { path: 'profile/myprofile', component: MyProfileComponent }
     ])
   ],
   providers: [],

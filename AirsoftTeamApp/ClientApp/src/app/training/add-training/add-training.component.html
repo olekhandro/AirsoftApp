@@ -1,8 +1,58 @@
 <div class="container">
-  <h1>Add Training</h1>
-  <form (ngSubmit)="onSubmit()" #addUserForm="ngForm">
-    
-    <button type="submit" class="btn btn-success">Submit</button>
+  <div class="box-breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/training/list">Тренировки</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Новая тренировка</li>
+    </ol>
+  </div>
 
-  </form>
+  <!--<td>{{training.name}}</td>
+  <td>{{training.coordX}}</td>
+  <td>{{training.coordY}}</td>
+  <td>{{training.date}}</td>
+  <td>{{training.startTime}}</td>
+  <td>{{training.endTime}}</td>
+  <td>{{training.place}}</td>-->
+
+  <div class="box-form">
+    <form (ngSubmit)="onSubmit()" #addUserForm="ngForm">
+      <div class="form-group row">
+        <label for="date" class="form-label">Дата:</label>
+        <input type="date" class="form-control" id="date" name="date" [(ngModel)]="training.date" required>
+      </div>
+
+      <div class="form-group row">
+        <label for="startTime" class="form-label">Время начала:</label>
+        <div class="col-auto">
+          <label class="mr-sm-2 sr-only" for="startTime">Preference</label>
+          <input type="time" name="startTime" value="09:00" min="00:00" max="23:00" [(ngModel)]="training.startTime" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="endTime" class="form-label">Время окончания:</label>
+        <div class="col-auto">
+          <label class="mr-sm-2 sr-only" for="startTime">Preference</label>
+          <input type="time" name="endTime" value="15:00" min="00:00" max="23:00" [(ngModel)]="training.endTime" required>
+        </div>
+      </div>
+
+        <div class="form-group row">
+          <label for="place" class="form-label">Место:</label>
+          <input type="text" class="form-control" id="place" name="place" [(ngModel)]="training.place" required>
+        </div>
+
+        <div class="form-group row">
+          <!--<label class="form-label">Координаты:</label>-->
+          <label for="coordX" class="form-label">Широта:</label>
+          <input type="text" class="form-control" id="coordX" name="coordX" [(ngModel)]="training.coordX" required>
+        </div>
+        <div class="form-group row">
+          <label for="coordY" class="form-label">Долгота:</label>
+          <input type="text" class="form-control" id="coordY" name="coordY" [(ngModel)]="training.coordY" required>
+        </div>
+        <div class="form-group row">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+</form>
+  </div>
 </div>

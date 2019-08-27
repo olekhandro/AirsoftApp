@@ -13,28 +13,19 @@ var core_1 = require("@angular/core");
 var rxjs_1 = require("rxjs");
 var operators_1 = require("rxjs/operators");
 var http_1 = require("@angular/common/http");
-var EventsService = /** @class */ (function () {
-    function EventsService(http, baseUrl) {
+var GameService = /** @class */ (function () {
+    function GameService(http, baseUrl) {
         this.http = http;
         this.baseUrl = baseUrl;
         this.headers = new http_1.HttpHeaders({ 'Content-Type': 'application/json' });
     }
-    EventsService.prototype.GetAllUsers = function () {
+    GameService.prototype.GetAllGames = function () {
         var _this = this;
-        return this.http.get(this.baseUrl + 'api/User/Users', { headers: this.headers }).pipe(operators_1.tap(function (data) {
-            _this.users = data;
+        return this.http.get(this.baseUrl + 'api/Game/Games', { headers: this.headers }).pipe(operators_1.tap(function (data) {
+            _this.events = data;
         }), operators_1.catchError(this.handleError));
     };
-    EventsService.prototype.AddUser = function (user) {
-        return this.http.post(this.baseUrl + 'api/User/AddUser', user, { headers: this.headers }).pipe();
-    };
-    EventsService.prototype.GetUserById = function (userId) {
-        return this.http.get(this.baseUrl + 'api/User/GetById/' + userId, { headers: this.headers }).pipe();
-    };
-    EventsService.prototype.DeleteUserById = function (userId) {
-        return this.http.delete(this.baseUrl + 'api/User/DeleteById/' + userId, { headers: this.headers }).pipe();
-    };
-    EventsService.prototype.handleError = function (error) {
+    GameService.prototype.handleError = function (error) {
         if (error.error instanceof ErrorEvent) {
             // A client-side or network error occurred. Handle it accordingly.  
             console.error('An error occurred:', error.error.message);
@@ -48,13 +39,13 @@ var EventsService = /** @class */ (function () {
         return rxjs_1.throwError('Something bad happened; please try again later.');
     };
     ;
-    EventsService = __decorate([
+    GameService = __decorate([
         core_1.Injectable({
             providedIn: 'root'
         }),
         __param(1, core_1.Inject('BASE_URL'))
-    ], EventsService);
-    return EventsService;
+    ], GameService);
+    return GameService;
 }());
-exports.EventsService = EventsService;
-//# sourceMappingURL=EventsService.js.map
+exports.GameService = GameService;
+//# sourceMappingURL=GameService.js.map

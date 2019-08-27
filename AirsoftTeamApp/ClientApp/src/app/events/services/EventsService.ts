@@ -2,7 +2,7 @@ import { Component, Inject, Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs'
 import { catchError, tap } from 'rxjs/operators'
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { UserModel } from '../models/UserModel';
+import { EventModel } from '../models/EventModel';
 
 @Injectable({
   providedIn: 'root'
@@ -10,30 +10,18 @@ import { UserModel } from '../models/UserModel';
 
 export class EventsService {
 
-  public users: UserModel[];
+  public events: EventModel[];
 
   private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {
   }
 
-  public GetAllUsers() {
-    return this.http.get<UserModel[]>(this.baseUrl + 'api/User/Users', { headers: this.headers }).pipe(tap(data => {
-      this.users = data;
+  public GetAllEvents() {
+    return this.http.get<EventModel[]>(this.baseUrl + 'api/Event/Events', { headers: this.headers }).pipe(tap(data => {
+      this.events = data;
     }),
       catchError(this.handleError)
     );
-  }
-
-  public AddUser(user: UserModel) {
-    return this.http.post<UserModel>(this.baseUrl + 'api/User/AddUser', user, { headers: this.headers }).pipe();
-  }
-
-  public GetUserById(userId: number): Observable<UserModel> {
-    return this.http.get<UserModel>(this.baseUrl + 'api/User/GetById/' + userId, { headers: this.headers }).pipe();
-  }
-
-  public DeleteUserById(userId: number) {
-    return this.http.delete(this.baseUrl + 'api/User/DeleteById/' + userId, { headers: this.headers }).pipe();
   }
 
   private handleError(error: HttpErrorResponse) {
