@@ -17,42 +17,58 @@
   <div class="box-form">
     <form (ngSubmit)="onSubmit()" #addUserForm="ngForm">
       <div class="form-group row">
-        <label for="date" class="form-label">Дата:</label>
-        <input type="date" class="form-control" id="date" name="date" [(ngModel)]="training.date" required>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="date" class="form-label">Дата:</label>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+          <input type="date" class="form-control" id="date" name="date" [(ngModel)]="training.date" required>
+        </div>
       </div>
 
       <div class="form-group row">
-        <label for="startTime" class="form-label">Время начала:</label>
-        <div class="col-auto">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="startTime" class="form-label">Время начала:</label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
           <label class="mr-sm-2 sr-only" for="startTime">Preference</label>
           <input type="time" name="startTime" value="09:00" min="00:00" max="23:00" [(ngModel)]="training.startTime" required>
+        </div> 
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="endTime" class="form-label">Время окончания:</label>
         </div>
-      </div>
-      <div class="form-group row">
-        <label for="endTime" class="form-label">Время окончания:</label>
-        <div class="col-auto">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
           <label class="mr-sm-2 sr-only" for="startTime">Preference</label>
           <input type="time" name="endTime" value="15:00" min="00:00" max="23:00" [(ngModel)]="training.endTime" required>
         </div>
       </div>
 
-        <div class="form-group row">
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
           <label for="place" class="form-label">Место:</label>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6 col-12">
           <input type="text" class="form-control" id="place" name="place" [(ngModel)]="training.place" required>
         </div>
+      </div>
 
-        <div class="form-group row">
-          <!--<label class="form-label">Координаты:</label>-->
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
           <label for="coordX" class="form-label">Широта:</label>
+          </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
           <input type="text" class="form-control" id="coordX" name="coordX" [(ngModel)]="training.coordX" required>
         </div>
-        <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
           <label for="coordY" class="form-label">Долгота:</label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">    
           <input type="text" class="form-control" id="coordY" name="coordY" [(ngModel)]="training.coordY" required>
         </div>
-        <div class="form-group row">
-          <button type="submit" class="btn btn-success">Submit</button>
-        </div>
-</form>
+      </div>
+
+      <div class="form-group row">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </form>
   </div>
 </div>

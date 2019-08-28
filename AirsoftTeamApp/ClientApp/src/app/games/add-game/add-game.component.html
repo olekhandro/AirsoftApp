@@ -1,8 +1,113 @@
 <div class="container">
-  <h1>Add Game</h1>
-  <form (ngSubmit)="onSubmit()" #addUserForm="ngForm">
-    
-    <button type="submit" class="btn btn-success">Submit</button>
+  <div class="box-breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/games/list">Игры</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Новая игра</li>
+    </ol>
+  </div>
 
-  </form>
+  <div class="box-form">
+    <form (ngSubmit)="onSubmit()" #addGameForm="ngForm">
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="date" class="form-label">Дата начала:</label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <input type="date" class="form-control" id="date" name="date" [(ngModel)]="events.date" required>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="startTime" class="form-label">Время начала:</label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label class="mr-sm-2 sr-only" for="startTime">Preference</label>
+          <input type="time" name="startTime" value="09:00" min="00:00" max="23:00" [(ngModel)]="events.startTime" required>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="date" class="form-label">Дата окончания:</label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <input type="date" class="form-control" id="date" name="date" [(ngModel)]="events.date" required>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="endTime" class="form-label">Время окончания:</label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label class="mr-sm-2 sr-only" for="startTime">Preference</label>
+          <input type="time" name="endTime" value="15:00" min="00:00" max="23:00" [(ngModel)]="events.endTime" required>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="place" class="form-label">Название игры:</label>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="events.name" required>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="place" class="form-label">Ссылка:</label>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+          <input type="text" class="form-control" id="link" name="link" [(ngModel)]="events.link" required>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="place" class="form-label">Формат игры:</label>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+          <div class="btn-group" role="group" id="gameType" name="gameType" aria-label="role-group" [(ngModel)]="events.gameType" *ngFor="let gameType of GameType.values()">
+            <button type="button" class="btn btn-secondary">
+              {{role}}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="place" class="form-label">Место:</label>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+          <input type="text" class="form-control" id="place" name="place" [(ngModel)]="events.place" required>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="coordX" class="form-label">Широта:</label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <input type="text" class="form-control" id="coordX" name="coordX" [(ngModel)]="events.coordX" required>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="coordY" class="form-label">Долгота:</label>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <input type="text" class="form-control" id="coordY" name="coordY" [(ngModel)]="events.coordY" required>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+          <label for="place" class="form-label">Взнос:</label>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-6 col-12">
+          <input type="text" class="form-control" id="cost" name="cost" [(ngModel)]="events.cost" required>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </form>
 </div>
+</div>
+

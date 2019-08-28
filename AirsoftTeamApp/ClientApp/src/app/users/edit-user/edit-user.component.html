@@ -7,83 +7,109 @@
   </div>
   <div class="box-form">
     <div class="row">
-      <div class="col-lg-5 col-md-12 col-sm-12 col-12">
-        <div class="user-photo">
-          <img src="/images/DnC3ow86beg.jpg" height="100%"  width="100%"/>
-        </div>
+      <div class="col-lg-5 col-md-5 col-sm-12 col-12">
+          <img src="/images/DnC3ow86beg.jpg" class="user-photo" />        
       </div>
-      <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+      <div class="col-lg-7 col-md-7 col-sm-12 col-12">
         <form (ngSubmit)="onSubmit()" #addUserForm="ngForm">
           <div class="form-group row">
-            <label for="email" class="form-label">Email:</label>
-            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="model.email" required>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+              <label for="email" class="form-label">Email:</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+              <input type="text" class="form-control" id="email" name="email" [(ngModel)]="model.email" required>
+            </div>             
           </div>
 
           <div class="form-group row">
-            <label for="username" class="form-label">Nickname:</label>
-            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="model.userName" required>
-            <div *ngIf="userName.invalid && (userName.dirty || userName.touched)"
-                 class="alert alert-danger">
-              <div *ngIf="userName.errors.required">
-                Nickname name is required.
+            <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+              <label for="username" class="form-label">Nickname:</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+              <input type="text" class="form-control" id="username" name="username" [(ngModel)]="model.userName" required>              
+              <div *ngIf="userName.invalid && (userName.dirty || userName.touched)"
+                   class="alert alert-danger">
+                <div *ngIf="userName.errors.required">
+                  Nickname name is required.
+                </div>
               </div>
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="firstName" class="form-label">Имя:</label>
-            <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" id="firstName" #firstName="ngModel" required>
-            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
-                 class="alert alert-danger">
-              <div *ngIf="firstName.errors.required">
-                Firstname name is required.
+            <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+              <label for="firstName" class="form-label">Имя:</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+              <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" id="firstName" #firstName="ngModel" required>
+              <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+                   class="alert alert-danger">
+                <div *ngIf="firstName.errors.required">
+                  Firstname name is required.
+                </div>
               </div>
             </div>
           </div>
 
           <div class="form-group row">
-            <label for="lastName" class="form-label">Фамилия:</label>
-            <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="model.lastName" required>
-          </div>
-
-          <div class="form-group row">
-            <label for="role" class="form-label">Роль:</label>
-            <div class="btn-group btn-group-toggle" role="group" id="role" name="role" aria-label="role-group" [(ngModel)]="model.role" *ngFor="let role of userRole.values()">
-              <button type="button" class="btn btn-secondary">
-                {{role}}
-              </button>
+            <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+              <label for="lastName" class="form-label">Фамилия:</label>
             </div>
-            <!--<select class="form-control" id="role" name="role" [(ngModel)]="model.role">
-              <option *ngFor="let role of userRole.values()">
-                {{role}}
-              </option>
-            </select>-->
-          </div>
-
-          <div class="form-group row">
-            <label for="state" class="form-label">Статус:</label>
-            <div class="btn-group" role="group" name="state" id="state" aria-label="state-group" [(ngModel)]="model.state" *ngFor="let state of userState.values()">
-              <button type="button" class="btn btn-secondary">
-                {{state}}
-              </button>
+            <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+              <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="model.lastName" required>
             </div>
-            <!--<select class="form-control" id="state" name="state" [(ngModel)]="model.state">
-              <option *ngFor="let role of userState.values()">
-                {{role}}
-              </option>
-            </select>-->
           </div>
-
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="hasCar" name="hasCar" [(ngModel)]="model.hasCar">
-            <label class="form-check-label" for="hasCar">Has Car</label>
-          </div>
-
 
           <div class="form-group row">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="model.password">
+            <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+              <label for="role" class="form-label">Роль:</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+              <div class="btn-group" role="group" id="role" name="role" aria-label="role-group" [(ngModel)]="model.role" *ngFor="let role of userRole.values()">
+                <button type="button" class="btn btn-secondary">
+                  {{role}}
+                </button>
+              </div>              
+              <!--<select class="form-control" id="role" name="role" [(ngModel)]="model.role">
+                <option *ngFor="let role of userRole.values()">
+                  {{role}}
+                </option>
+              </select>-->
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+              <label for="state" class="form-label">Статус:</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+              <div class="btn-group" role="group" name="state" id="state" aria-label="state-group" [(ngModel)]="model.state" *ngFor="let state of userState.values()">
+                <button type="button" class="btn btn-secondary">
+                  {{state}}
+                </button>
+              </div>
+              <select class="form-control" id="state" name="state" [(ngModel)]="model.state">
+                  <option *ngFor="let role of userState.values()">
+                    {{role}}
+                  </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-check row">
+            <div class="col-12">
+              <input type="checkbox" class="form-check-input" id="hasCar" name="hasCar" [(ngModel)]="model.hasCar">
+              <label class="form-check-label" for="hasCar">Has Car</label>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-lg-3 col-md-4 col-sm-5 col-12">
+              <label for="password" class="form-label">Password</label>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-7 col-12">
+              <input type="password" class="form-control" id="password" name="password" [(ngModel)]="model.password">
+            </div>
           </div>
 
           <button type="submit" class="btn btn-success">Submit</button>
